@@ -1,1 +1,7 @@
-
+### Sample: requirements.txt
+```
+fastapi
+uvicorn
+pymongo
+streamlit
+pydantic
