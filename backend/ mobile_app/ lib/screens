@@ -1,1 +1,11 @@
-
+### Screens:
+- `login_screen.dart` ✅
+- `register_screen.dart` ✅
+- `home_screen.dart` ✅
+- `directory_screen.dart` ✅
+- `events_screen.dart` ✅
+- `gate_entry_screen.dart` ✅
+- `discussion_screen.dart`
+- `advertisement_screen.dart`
+- `emergency_screen.dart`
+- `profile_screen.dart`
