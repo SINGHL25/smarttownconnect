@@ -1,36 +1,26 @@
 import 'package:flutter/material.dart';
 
 class EmergencyScreen extends StatelessWidget {
-  final List<Map<String, String>> emergencyContacts = [
-    {"title": "Security", "number": "9999-111-222"},
-    {"title": "Ambulance", "number": "102"},
-    {"title": "Fire", "number": "101"},
-    {"title": "Local Police", "number": "100"},
-    {"title": "Electricity", "number": "1800-233-3435"},
+  final List<Map<String, String>> contacts = [
+    {"type": "Security", "number": "100"},
+    {"type": "Ambulance", "number": "108"},
+    {"type": "Fire", "number": "101"},
+    {"type": "Local Hospital", "number": "9999999999"},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Emergency Services")),
+      appBar: AppBar(title: Text("Emergency Contacts")),
       body: ListView.builder(
-        itemCount: emergencyContacts.length,
-        itemBuilder: (context, index) {
-          final contact = emergencyContacts[index];
-          return Card(
-            child: ListTile(
-              title: Text(contact["title"]!),
-              subtitle: Text("Phone: ${contact["number"]}"),
-              leading: Icon(Icons.local_phone),
-              trailing: Icon(Icons.call, color: Colors.green),
-              onTap: () {
-                // You can use url_launcher to call: tel://${contact["number"]}
-              },
-            ),
-          );
-        },
+        itemCount: contacts.length,
+        itemBuilder: (_, index) => ListTile(
+          leading: Icon(Icons.phone, color: Colors.red),
+          title: Text(contacts[index]["type"]!),
+          subtitle: Text(contacts[index]["number"]!),
+          trailing: Icon(Icons.call),
+        ),
       ),
     );
   }
 }
-
